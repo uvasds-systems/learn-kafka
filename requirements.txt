@@ -1,3 +1,4 @@
 requests
-quixstreams
 requests_sse
+quixstreams
+tornado
