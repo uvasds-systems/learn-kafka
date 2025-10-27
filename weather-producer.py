@@ -4,7 +4,6 @@ import json
 import logging
 from quixstreams import Application
 
-
 def get_weather():
     response = requests.get(
         "https://api.open-meteo.com/v1/forecast",
@@ -30,7 +29,7 @@ def main():
             logging.debug("Got weather: %s", weather)
             producer.produce(
                 topic="weather_data_demo",
-                key="Charlottesville",
+                key="CharlottesvilleWeather",
                 value=json.dumps(weather),
             )
             logging.info("Produced. Sleeping...")
