@@ -2,7 +2,6 @@ from quixstreams import Application
 import json
 import time
 
-
 def main():
     app = Application(
         # set broker(s)
@@ -15,9 +14,9 @@ def main():
         consumer_group="weather_reader",
 
         # processing guarantees: 
-        #   - exactly-once   - msg will be processe exactly once
+        #   - exactly-once   - msg will be processed exactly once
         #   - at-least-once  - may be processed more than once
-        #   KAFKA native but not in Quix Streams:
+        #   KAFKA native but not in QuixStreams:
         #   - at-most-once   - if process fails it will not be retried
         processing_guarantee="exactly-once",
 
