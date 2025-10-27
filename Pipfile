@@ -5,8 +5,9 @@ name = "pypi"
 
 [packages]
 requests = "*"
-quixstreams = "*"
 requests-sse = "*"
+quixstreams = "*"
+tornado = "*"
 
 [dev-packages]
 
